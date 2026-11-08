@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="Neon backgammon board">
+  <defs>
+    <filter id="g" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <polygon id="up" points="0,0 34,0 17,118"/>
+  </defs>
+  <rect x="4" y="4" width="472" height="292" rx="14" fill="#0d0f29" stroke="#00f0ff" stroke-width="3" filter="url(#g)"/>
+  <rect x="228" y="4" width="24" height="292" fill="#12153a" stroke="#00f0ff" stroke-width="1.5"/>
+  <g filter="url(#g)" stroke-width="1.5">
+    <g fill="none" stroke="#ff2bd6">
+      <use href="#up" x="14" y="10"/><use href="#up" x="84" y="10"/><use href="#up" x="154" y="10"/>
+      <use href="#up" x="262" y="10"/><use href="#up" x="332" y="10"/><use href="#up" x="402" y="10"/>
+      <polygon points="49,290 83,290 66,172"/><polygon points="119,290 153,290 136,172"/><polygon points="189,290 223,290 206,172"/><polygon points="297,290 331,290 314,172"/><polygon points="367,290 401,290 384,172"/><polygon points="437,290 471,290 454,172"/>
+    </g>
+    <g fill="#ff2bd6" fill-opacity=".25" stroke="#ff2bd6">
+      <use href="#up" x="49" y="10"/><use href="#up" x="119" y="10"/><use href="#up" x="189" y="10"/>
+      <use href="#up" x="297" y="10"/><use href="#up" x="367" y="10"/><use href="#up" x="437" y="10"/>
+    </g>
+    <g fill="#00f0ff" fill-opacity=".2" stroke="#00f0ff">
+      <polygon points="14,290 48,290 31,172"/><polygon points="84,290 118,290 101,172"/><polygon points="154,290 188,290 171,172"/>
+      <polygon points="262,290 296,290 279,172"/><polygon points="332,290 366,290 349,172"/><polygon points="402,290 436,290 419,172"/>
+    </g>
+  </g>
+  <g filter="url(#g)">
+    <g fill="#ffe14d" stroke="#fff6b0" stroke-width="1.5">
+      <circle cx="31" cy="27" r="14"/><circle cx="31" cy="55" r="14"/><circle cx="31" cy="83" r="14"/>
+      <circle cx="279" cy="27" r="14"/><circle cx="279" cy="55" r="14"/>
+      <circle cx="384" cy="273" r="14"/><circle cx="384" cy="245" r="14"/><circle cx="384" cy="217" r="14"/>
+    </g>
+    <g fill="#39ff88" stroke="#c9ffe0" stroke-width="1.5">
+      <circle cx="171" cy="273" r="14"/><circle cx="171" cy="245" r="14"/>
+      <circle cx="419" cy="27" r="14"/><circle cx="419" cy="55" r="14"/><circle cx="419" cy="83" r="14"/>
+    </g>
+    <g fill="#ff2bd6" stroke="#ffc2f2" stroke-width="1.5">
+      <circle cx="101" cy="273" r="14"/><circle cx="136" cy="27" r="14"/><circle cx="240" cy="150" r="11"/>
+    </g>
+    <g fill="#00f0ff" stroke="#c2fbff" stroke-width="1.5">
+      <circle cx="314" cy="273" r="14"/><circle cx="314" cy="245" r="14"/><circle cx="66" cy="27" r="14"/>
+    </g>
+  </g>
+  <g transform="translate(300 128) rotate(-12)" filter="url(#g)">
+    <rect width="40" height="40" rx="7" fill="#0d0f29" stroke="#ffffff" stroke-width="2"/>
+    <g fill="#fff"><circle cx="10" cy="10" r="3.5"/><circle cx="30" cy="30" r="3.5"/><circle cx="20" cy="20" r="3.5"/></g>
+  </g>
+  <g transform="translate(352 132) rotate(15)" filter="url(#g)">
+    <rect width="40" height="40" rx="7" fill="#0d0f29" stroke="#ffffff" stroke-width="2"/>
+    <g fill="#fff"><circle cx="10" cy="10" r="3.5"/><circle cx="30" cy="10" r="3.5"/><circle cx="10" cy="30" r="3.5"/><circle cx="30" cy="30" r="3.5"/><circle cx="10" cy="20" r="3.5"/><circle cx="30" cy="20" r="3.5"/></g>
+  </g>
+</svg>

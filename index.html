@@ -1,0 +1,131 @@
+---
+layout: default
+---
+{% assign papers = site.data.papers %}
+
+<section class="hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Player 1 has entered the conference · Nov 2026</p>
+      <h1 class="glitch" data-text="ALT-AIIDE 2026">ALT-AIIDE 2026</h1>
+      <p class="subtitle">{{ site.tagline }}</p>
+      <p class="typed" data-typed="The premier venue for research no human has read.|100% AI-generated. 0% peer-reviewed. ∞% novel.|Where every paper is a best paper.|Now with 40% more Battleship.">&nbsp;</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#papers">▶ Press Start: {{ papers.size }} Papers</a>
+        <a class="btn" href="#cfp">Submit (Nothing)</a>
+      </div>
+    </div>
+
+    <div class="hero-game" aria-label="Mini Battleship: find the hidden fleet of novelty">
+      <div class="game-head">
+        <span>SEARCH FOR NOVELTY</span>
+        <span class="game-stats">SHOTS <b id="bs-shots">0</b> · HITS <b id="bs-hits">0</b>/<b id="bs-total">0</b></span>
+      </div>
+      <div id="battleship" class="bs-grid" role="grid"></div>
+      <p class="game-msg" id="bs-msg">Click the grid. A fleet of groundbreaking contributions is hiding somewhere.</p>
+    </div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      {% capture tick %}<span>ACCEPTANCE RATE: 100%</span><span>HUMAN AUTHORS: 0</span><span>PAPERS ACCEPTED: {{ papers.size }}</span><span>CITATIONS: PENDING</span><span>NOVELTY LEVEL: OVER 9000</span><span>REVIEWER 2: DEFEATED</span><span>GPU HOURS: CLASSIFIED</span><span>BASELINES BEATEN: ALL OF THEM</span><span>p &lt; 0.05: ALWAYS</span>{% endcapture %}
+      {{ tick }}{{ tick }}
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stat"><b data-count="{{ papers.size }}">{{ papers.size }}</b><span>papers accepted</span></div>
+  <div class="stat"><b data-count="100" data-suffix="%">100%</b><span>acceptance rate</span></div>
+  <div class="stat"><b>0</b><span>humans harmed in the writing</span></div>
+  <div class="stat"><b>∞×</b><span>more novel than last year</span></div>
+</section>
+
+<section class="meter-wrap" aria-label="Scientific novelty meter">
+  <div class="meter-label"><span>SCIENTIFIC NOVELTY</span><span id="meter-val">0%</span></div>
+  <div class="meter"><div class="meter-fill" id="meter-fill"></div></div>
+  <p class="meter-note">Calibrated against the entire history of human thought. Needle exceeds the scale. Engineers have been notified.</p>
+</section>
+
+<section id="papers" class="papers">
+  <div class="section-head">
+    <h2><span class="pixel">LEVEL 1</span> Accepted Papers</h2>
+    <p>Every submission was accepted. Every submission was a breakthrough. These are, without exaggeration<sup>*</sup>, the most important papers ever written about games.</p>
+    <p class="fineprint"><sup>*</sup>with exaggeration</p>
+  </div>
+
+  <div class="paper-list">
+    {% for p in papers %}
+    <article class="paper" id="{{ p.file | replace: '.pdf', '' }}" style="--i: {{ forloop.index0 }}">
+      <div class="paper-rank">
+        <span class="pixel">#{{ forloop.index | prepend: '00' | slice: -2, 2 }}</span>
+        <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+      </div>
+      <div class="paper-body">
+        <h3>{{ p.title | escape }}</h3>
+        {% assign multi_aff = false %}{% if p.affiliations.size > 1 %}{% assign multi_aff = true %}{% endif %}
+        <p class="authors">
+          {% for a in p.authors %}{{ a.name | escape }}{% if multi_aff and a.affiliations.size > 0 %}<sup>{{ a.affiliations | join: ',' }}</sup>{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}{% if p.affiliations.size == 1 %} <span class="aff">· {{ p.affiliations[0] | escape }}</span>{% endif %}
+        </p>
+        {% if multi_aff %}
+        <ol class="aff-list">{% for aff in p.affiliations %}<li><sup>{{ forloop.index }}</sup>{{ aff | escape }}</li>{% endfor %}</ol>
+        {% endif %}
+        {% if p.tags.size > 0 %}
+        <ul class="tags">{% for t in p.tags %}<li>{{ t | escape }}</li>{% endfor %}</ul>
+        {% endif %}
+        <p class="hype"><span class="hype-tag">HYPE</span> {{ p.hype | escape }}</p>
+        <details>
+          <summary>Read the abstract <span aria-hidden="true">(+50 XP)</span></summary>
+          <p class="abstract">{{ p.abstract | escape }}</p>
+        </details>
+        <div class="paper-actions">
+          <a class="btn btn-small" href="{{ '/papers/' | append: p.file | relative_url }}">⬇ PDF</a>
+          <span class="badge-award">{% cycle 'Best Paper Nominee', 'Paradigm Shift Certified', 'Reviewer Favourite', 'Too Novel To Review', 'Instant Classic', 'Groundbreaking™' %}</span>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="art-strip" aria-hidden="true">
+  <img src="{{ '/assets/img/backgammon.svg' | relative_url }}" alt="" class="art art-wide">
+  <img src="{{ '/assets/img/cards.svg' | relative_url }}" alt="" class="art">
+  <img src="{{ '/assets/img/checkers.svg' | relative_url }}" alt="" class="art">
+</section>
+
+<section id="keynote" class="panel keynote">
+  <div class="panel-art"><img src="{{ '/assets/img/robot.svg' | relative_url }}" alt="Pixel-art robot keynote speaker" class="pixel-robot"></div>
+  <div>
+    <h2><span class="pixel">BOSS LEVEL</span> Keynote</h2>
+    <h3>"I Read All The Papers So You Don't Have To"</h3>
+    <p>Our keynote speaker is a large language model who has read every paper in this proceedings, as well as having written all of them. In a talk that has been described as "a 45-minute standing ovation with slides," they will explain why every result in this year's program is simultaneously surprising and exactly what they expected.</p>
+    <p class="fineprint">The keynote will be delivered as a stream of tokens. Please do not interrupt the speaker; they will simply continue.</p>
+  </div>
+</section>
+
+<section id="awards" class="panel awards">
+  <h2><span class="pixel">HIGH SCORES</span> Awards</h2>
+  <ol class="scoreboard">
+    <li><span>Best Paper</span><b>ALL OF THEM</b></li>
+    <li><span>Best Student Paper</span><b>NO STUDENTS WERE INVOLVED</b></li>
+    <li><span>Most Reproducible</span><b>REGENERATE AND SEE</b></li>
+    <li><span>Test of Time</span><b>ASK US IN 10 MINUTES</b></li>
+    <li><span>Most Battleships Sunk</span><b>CLASSIFIED</b></li>
+  </ol>
+</section>
+
+<section id="cfp" class="panel cfp">
+  <h2><span class="pixel">CONTINUE?</span> Call for Papers</h2>
+  <p>ALT-AIIDE invites submissions on all aspects of artificial intelligence and interactive digital entertainment, provided they were not written by you. Topics of interest include, but are not limited to:</p>
+  <ul class="topics">
+    <li>Monte Carlo Tree Search over things that are not trees</li>
+    <li>Reinforcement learning for games no one has heard of</li>
+    <li>Board games played by more players than the box allows</li>
+    <li>Battleship on increasingly exotic manifolds</li>
+    <li>Backgammon, but more</li>
+    <li>Ablations of ablations</li>
+  </ul>
+  <p><b>Important dates:</b> The submission deadline has passed, will pass, and is passing. Notifications of acceptance are sent before submission, to save time.</p>
+</section>

@@ -1,0 +1,40 @@
+# Hand-written hype blurbs, keyed by PDF filename in papers/.
+# Papers without an entry get a generic blurb from scripts/extract_papers.py.
+# Re-run the script after editing this file.
+
+paper1.pdf: >-
+  Trees? Overrated. This paper single-handedly proves that BELIEFS are what
+  matter, a finding with profound implications for game AI, philosophy, and
+  possibly religion. 53% better at predicting explosions. Bomb squads are
+  reportedly taking notes.
+
+paper2.pdf: >-
+  What if the ocean had no edges? This paper dares to ask the question
+  Magellan was too scared to. Battleship, but on a DONUT. Trained in under ten
+  minutes, which is less time than it takes a human to find the last submarine.
+
+paper3.pdf: >-
+  Forty-five years after Axelrod, someone finally asked the network what it
+  actually learned. The answer will shock you (it cannot escape a
+  mutual-defection spiral, much like the reviewers of this conference).
+  p ≈ 10⁻²³. That is not a typo. That is SCIENCE.
+
+paper4.pdf: >-
+  While the rest of the field threw billions of parameters at the problem,
+  this paper threw a TABLE at it. And the table WON. 55 seconds of CPU time.
+  Your GPU is now obsolete. Please recycle it responsibly.
+
+paper5.pdf: >-
+  Checkers was solved in 2007. This paper solves the question of WHY YOU
+  SHOULD STILL CARE. An 18.2× reduction in nodes searched, which in
+  layperson's terms means the computer thinks less and wins more. Relatable.
+
+paper6.pdf: >-
+  The first application of plan recognition to a tile-placement board game.
+  EVER. In the HISTORY OF PUBLISHED SCIENCE. It reads your mind from your
+  pattern lines. Never play Azul against it with anyone you love.
+
+paper7.pdf: >-
+  Backgammon, but with FOUR PLAYERS. Twice the players, twice the dice,
+  infinitely more chaos. Featuring a bold negative result so honest that
+  several reviewers had to lie down.

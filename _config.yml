@@ -1,0 +1,16 @@
+title: ALT-AIIDE 2026
+tagline: The Alternative Conference on AI-Generated Interactive Digital Entertainment
+description: >-
+  The premier venue for game AI research that no human has read.
+  100% AI-generated papers. 0% human authors. Infinite novelty.
+url: ""        # e.g. https://<user>.github.io
+baseurl: ""    # e.g. /alt-aiide if served from a project repo
+
+exclude:
+  - scripts/
+  - designdoc.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .bundle/

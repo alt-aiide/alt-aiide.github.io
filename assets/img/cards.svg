@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 200" role="img" aria-label="Fanned neon playing cards">
+  <defs><filter id="g" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <g filter="url(#g)" font-family="monospace" font-weight="bold">
+    <g transform="translate(70 40) rotate(-22 50 140)">
+      <rect width="96" height="136" rx="10" fill="#0d0f29" stroke="#00f0ff" stroke-width="3"/>
+      <text x="12" y="30" fill="#00f0ff" font-size="22">A</text>
+      <path d="M48 52 l14 22 -14 22 -14 -22z" fill="#00f0ff"/>
+    </g>
+    <g transform="translate(80 30)">
+      <rect width="96" height="136" rx="10" fill="#0d0f29" stroke="#ff2bd6" stroke-width="3"/>
+      <text x="12" y="30" fill="#ff2bd6" font-size="22">K</text>
+      <path d="M48 96 c-26-18-26-36-12-40 c6-2 10 2 12 6 c2-4 6-8 12-6 c14 4 14 22-12 40z" fill="#ff2bd6"/>
+    </g>
+    <g transform="translate(92 40) rotate(22 50 140)">
+      <rect width="96" height="136" rx="10" fill="#0d0f29" stroke="#ffe14d" stroke-width="3"/>
+      <text x="12" y="30" fill="#ffe14d" font-size="22">?</text>
+      <circle cx="48" cy="78" r="18" fill="none" stroke="#ffe14d" stroke-width="4"/>
+      <path d="M58 62 l8 -10 m-2 2 l6 -2" stroke="#ffe14d" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>
